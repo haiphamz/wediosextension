@@ -136,7 +136,8 @@ pbx_objects.append(f'''\t\t{id_core_grp} /* Core */ = {{
 \t\t\tsourceTree = "<group>";
 \t\t}};''')
 
-pbx_objects.append(f'''\t\t{id_core_grp} /* Views */ = {{
+# VIEWS GROUP (Clean unique id_views_grp)
+pbx_objects.append(f'''\t\t{id_views_grp} /* Views */ = {{
 \t\t\tisa = PBXGroup;
 \t\t\tchildren = (
 {views_children}
@@ -232,7 +233,6 @@ pbx_objects.append(f'''\t\t{id_project} /* Project object */ = {{
 \t\t\t);
 \t\t}};''')
 
-# Build settings with Code Signing DISABLED completely (for unsigned ad-hoc builds)
 common_settings = '''
 \t\t\t\tALWAYS_SEARCH_USER_PATHS = NO;
 \t\t\t\tASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -254,6 +254,10 @@ common_settings = '''
 \t\t\t\t\t"@executable_path/Frameworks",
 \t\t\t\t);
 \t\t\t\tMARKETING_VERSION = 1.0.0;
+\t\t\t\tOTHER_LDFLAGS = (
+\t\t\t\t\t"$(inherited)",
+\t\t\t\t\t"-lz",
+\t\t\t\t);
 \t\t\t\tPRODUCT_BUNDLE_IDENTIFIER = com.vanhai.extensionbrowser;
 \t\t\t\tPRODUCT_NAME = "$(TARGET_NAME)";
 \t\t\t\tSDKROOT = iphoneos;
@@ -344,7 +348,7 @@ pbxproj_content = f'''// !$*UTF8*$!
 with open(os.path.join(proj_dir, 'project.pbxproj'), 'w', encoding='utf-8') as f:
     f.write(pbxproj_content)
 
-# CREATE SHARED SCHEME (CRITICAL FOR XCODEBUILD)
+# Shared scheme
 scheme_dir = os.path.join(proj_dir, 'xcshareddata', 'xcschemes')
 os.makedirs(scheme_dir, exist_ok=True)
 
@@ -431,4 +435,4 @@ scheme_content = f'''<?xml version="1.0" encoding="UTF-8"?>
 with open(os.path.join(scheme_dir, 'ExtensionBrowser.xcscheme'), 'w', encoding='utf-8') as f:
     f.write(scheme_content)
 
-print('Generated project.pbxproj AND ExtensionBrowser.xcscheme successfully!')
+print('Regenerated project.pbxproj and ExtensionBrowser.xcscheme successfully!')

@@ -5,146 +5,146 @@
 	};
 	objectVersion = 56;
 	objects = {
-		9A961AA2F3C94467BA67D883 /* ExtensionBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionBrowserApp.swift"; sourceTree = "<group>"; };
-		CB29B2AED88A45DD8786A08B /* WebExtensionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebExtensionModel.swift"; sourceTree = "<group>"; };
-		E771A724922C4244904E5C99 /* MatchPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchPattern.swift"; sourceTree = "<group>"; };
-		D4D54E6C040E463D90AE2AC0 /* ZipExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZipExtractor.swift"; sourceTree = "<group>"; };
-		4956A330F9FE4A028135179E /* WebExtensionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebExtensionManager.swift"; sourceTree = "<group>"; };
-		AAB0C4D23E2244CEA05F3617 /* WebExtensionBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebExtensionBridge.swift"; sourceTree = "<group>"; };
-		A323451B04C940FABC960D11 /* BrowserWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrowserWebView.swift"; sourceTree = "<group>"; };
-		4EA862AFD77D4E34877C2808 /* ExtensionPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionPopupView.swift"; sourceTree = "<group>"; };
-		5DDC167AC73E4D5E9EBB8AF8 /* ExtensionManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionManagerView.swift"; sourceTree = "<group>"; };
-		984A44F8F6164198B5D6A2F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
-		7F723CD71328456EB755C5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
-		E22701876F384AD38F68B860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
-		BFC50E6FE94C47F1948BF85F /* extension_bridge.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "extension_bridge.js"; sourceTree = "<group>"; };
-		78C9148BA496444797060483 /* soundcloud_cue */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "soundcloud_cue"; sourceTree = "<group>"; };
-		5656A8DEF6A543ADB5A7EE09 /* ExtensionBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A18B16FE28C9470CA24693CF /* ExtensionBrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A961AA2F3C94467BA67D883 /* ExtensionBrowserApp.swift */; };
-		52B19D5499B04C538FC2C6E8 /* WebExtensionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB29B2AED88A45DD8786A08B /* WebExtensionModel.swift */; };
-		0A8F13B681E041989CD714C6 /* MatchPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771A724922C4244904E5C99 /* MatchPattern.swift */; };
-		A45F519B702746368CB6DE07 /* ZipExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D54E6C040E463D90AE2AC0 /* ZipExtractor.swift */; };
-		FF1E5F6348CD40DBA982DB13 /* WebExtensionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956A330F9FE4A028135179E /* WebExtensionManager.swift */; };
-		63D52E94DB644F47BCF00D56 /* WebExtensionBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0C4D23E2244CEA05F3617 /* WebExtensionBridge.swift */; };
-		D28072CE36DC4DEBB65BB988 /* BrowserWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A323451B04C940FABC960D11 /* BrowserWebView.swift */; };
-		DC2C7AA775A8431D8BEA3116 /* ExtensionPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA862AFD77D4E34877C2808 /* ExtensionPopupView.swift */; };
-		77AA62744AB9470E828BDA4F /* ExtensionManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDC167AC73E4D5E9EBB8AF8 /* ExtensionManagerView.swift */; };
-		C5E53675B6A6469593614303 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984A44F8F6164198B5D6A2F5 /* ContentView.swift */; };
-		DA1213DDB83247B3B9823C28 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F723CD71328456EB755C5A9 /* Info.plist */; };
-		350EB68D321C4575B9EC0EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22701876F384AD38F68B860 /* Assets.xcassets */; };
-		1E6FA2A5E3AA416F8862BA5B /* extension_bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = BFC50E6FE94C47F1948BF85F /* extension_bridge.js */; };
-		98FC44DFBED1488AA174B0AB /* soundcloud_cue in Resources */ = {isa = PBXBuildFile; fileRef = 78C9148BA496444797060483 /* soundcloud_cue */; };
-		AF795EF078624A5BAD0908BD /* Sources */ = {
+		FA2A4B771ED04AF5BE396B14 /* ExtensionBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionBrowserApp.swift"; sourceTree = "<group>"; };
+		8D68AA6753724080BF06ABEE /* WebExtensionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebExtensionModel.swift"; sourceTree = "<group>"; };
+		E271BEBEFC0046B4B38A414D /* MatchPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchPattern.swift"; sourceTree = "<group>"; };
+		3F5D07A3F0A14ED38677AB89 /* ZipExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZipExtractor.swift"; sourceTree = "<group>"; };
+		B7F326BD1B1B401DAE49DDAC /* WebExtensionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebExtensionManager.swift"; sourceTree = "<group>"; };
+		6F2D33DA069C4EECBE19319B /* WebExtensionBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebExtensionBridge.swift"; sourceTree = "<group>"; };
+		60EE318CBE7F40A3BB16C144 /* BrowserWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrowserWebView.swift"; sourceTree = "<group>"; };
+		2D74F66B7EF448809125A2C8 /* ExtensionPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionPopupView.swift"; sourceTree = "<group>"; };
+		363252E1D928466C87193D93 /* ExtensionManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionManagerView.swift"; sourceTree = "<group>"; };
+		26D5841231B7417AAD536C94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
+		CF9C78B580534484ACCBF688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
+		A445596FB8E8453896937038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
+		F52E23B050C7419ABAC7E859 /* extension_bridge.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "extension_bridge.js"; sourceTree = "<group>"; };
+		9F6A97732902429DB2E8BF54 /* soundcloud_cue */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "soundcloud_cue"; sourceTree = "<group>"; };
+		F0B58484C1864627859C20B9 /* ExtensionBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		962138C9D90A413082A21AC3 /* ExtensionBrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2A4B771ED04AF5BE396B14 /* ExtensionBrowserApp.swift */; };
+		09212381C2D74C6AB8D17040 /* WebExtensionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D68AA6753724080BF06ABEE /* WebExtensionModel.swift */; };
+		B4068ECC7321412C868872BC /* MatchPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271BEBEFC0046B4B38A414D /* MatchPattern.swift */; };
+		541DBE8A2AEF4CCBB72B7CD1 /* ZipExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D07A3F0A14ED38677AB89 /* ZipExtractor.swift */; };
+		5D852A7C088D4EA68433AF4F /* WebExtensionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F326BD1B1B401DAE49DDAC /* WebExtensionManager.swift */; };
+		C8C004527A3E495C90A8962F /* WebExtensionBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2D33DA069C4EECBE19319B /* WebExtensionBridge.swift */; };
+		5AB678D4C59A4E568CC4CE5D /* BrowserWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE318CBE7F40A3BB16C144 /* BrowserWebView.swift */; };
+		98AB3625F27F4277861ADC7A /* ExtensionPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D74F66B7EF448809125A2C8 /* ExtensionPopupView.swift */; };
+		022A8BCB015F4E24B184EFBD /* ExtensionManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363252E1D928466C87193D93 /* ExtensionManagerView.swift */; };
+		B0D49D2DCA284F7DAB584F68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D5841231B7417AAD536C94 /* ContentView.swift */; };
+		559D84D97CD24FC890CAD33A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF9C78B580534484ACCBF688 /* Info.plist */; };
+		8844C842281443F5846FA560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A445596FB8E8453896937038 /* Assets.xcassets */; };
+		B306502369F5438BA9995BB2 /* extension_bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = F52E23B050C7419ABAC7E859 /* extension_bridge.js */; };
+		0F9CEA080A524874921EAADD /* soundcloud_cue in Resources */ = {isa = PBXBuildFile; fileRef = 9F6A97732902429DB2E8BF54 /* soundcloud_cue */; };
+		387E08D3111B49578722AE79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A18B16FE28C9470CA24693CF /* ExtensionBrowserApp.swift in Sources */,
-				52B19D5499B04C538FC2C6E8 /* WebExtensionModel.swift in Sources */,
-				0A8F13B681E041989CD714C6 /* MatchPattern.swift in Sources */,
-				A45F519B702746368CB6DE07 /* ZipExtractor.swift in Sources */,
-				FF1E5F6348CD40DBA982DB13 /* WebExtensionManager.swift in Sources */,
-				63D52E94DB644F47BCF00D56 /* WebExtensionBridge.swift in Sources */,
-				D28072CE36DC4DEBB65BB988 /* BrowserWebView.swift in Sources */,
-				DC2C7AA775A8431D8BEA3116 /* ExtensionPopupView.swift in Sources */,
-				77AA62744AB9470E828BDA4F /* ExtensionManagerView.swift in Sources */,
-				C5E53675B6A6469593614303 /* ContentView.swift in Sources */,
+				962138C9D90A413082A21AC3 /* ExtensionBrowserApp.swift in Sources */,
+				09212381C2D74C6AB8D17040 /* WebExtensionModel.swift in Sources */,
+				B4068ECC7321412C868872BC /* MatchPattern.swift in Sources */,
+				541DBE8A2AEF4CCBB72B7CD1 /* ZipExtractor.swift in Sources */,
+				5D852A7C088D4EA68433AF4F /* WebExtensionManager.swift in Sources */,
+				C8C004527A3E495C90A8962F /* WebExtensionBridge.swift in Sources */,
+				5AB678D4C59A4E568CC4CE5D /* BrowserWebView.swift in Sources */,
+				98AB3625F27F4277861ADC7A /* ExtensionPopupView.swift in Sources */,
+				022A8BCB015F4E24B184EFBD /* ExtensionManagerView.swift in Sources */,
+				B0D49D2DCA284F7DAB584F68 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		144C2026710A45CCA0153B9A /* Resources */ = {
+		54C077362051480EB452946E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA1213DDB83247B3B9823C28 /* Info.plist in Resources */,
-				350EB68D321C4575B9EC0EF1 /* Assets.xcassets in Resources */,
-				1E6FA2A5E3AA416F8862BA5B /* extension_bridge.js in Resources */,
-				98FC44DFBED1488AA174B0AB /* soundcloud_cue in Resources */,
+				559D84D97CD24FC890CAD33A /* Info.plist in Resources */,
+				8844C842281443F5846FA560 /* Assets.xcassets in Resources */,
+				B306502369F5438BA9995BB2 /* extension_bridge.js in Resources */,
+				0F9CEA080A524874921EAADD /* soundcloud_cue in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B8964557DEAC493D80B5A00A /* Frameworks */ = {
+		92E86E67C7D84A3B92B9AB85 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2F9C66C82A124FF1BA3E433A /* App */ = {
+		43A4222788B647C4852451EA /* App */ = {
 			isa = PBXGroup;
 			children = (
-				9A961AA2F3C94467BA67D883 /* ExtensionBrowserApp.swift */,
-				7F723CD71328456EB755C5A9 /* Info.plist */,
+				FA2A4B771ED04AF5BE396B14 /* ExtensionBrowserApp.swift */,
+				CF9C78B580534484ACCBF688 /* Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		017FACC5E7DE414F82749068 /* Core */ = {
+		C0E2569AFFED4BC8A8A6B052 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CB29B2AED88A45DD8786A08B /* WebExtensionModel.swift */,
-				E771A724922C4244904E5C99 /* MatchPattern.swift */,
-				D4D54E6C040E463D90AE2AC0 /* ZipExtractor.swift */,
-				4956A330F9FE4A028135179E /* WebExtensionManager.swift */,
-				AAB0C4D23E2244CEA05F3617 /* WebExtensionBridge.swift */,
+				8D68AA6753724080BF06ABEE /* WebExtensionModel.swift */,
+				E271BEBEFC0046B4B38A414D /* MatchPattern.swift */,
+				3F5D07A3F0A14ED38677AB89 /* ZipExtractor.swift */,
+				B7F326BD1B1B401DAE49DDAC /* WebExtensionManager.swift */,
+				6F2D33DA069C4EECBE19319B /* WebExtensionBridge.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		017FACC5E7DE414F82749068 /* Views */ = {
+		191EC3B48C7F436386C0F5D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A323451B04C940FABC960D11 /* BrowserWebView.swift */,
-				4EA862AFD77D4E34877C2808 /* ExtensionPopupView.swift */,
-				5DDC167AC73E4D5E9EBB8AF8 /* ExtensionManagerView.swift */,
-				984A44F8F6164198B5D6A2F5 /* ContentView.swift */,
+				60EE318CBE7F40A3BB16C144 /* BrowserWebView.swift */,
+				2D74F66B7EF448809125A2C8 /* ExtensionPopupView.swift */,
+				363252E1D928466C87193D93 /* ExtensionManagerView.swift */,
+				26D5841231B7417AAD536C94 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		63A34BE664E84B7291918C1C /* Resources */ = {
+		60685E124B974BA3B760EC33 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E22701876F384AD38F68B860 /* Assets.xcassets */,
-				BFC50E6FE94C47F1948BF85F /* extension_bridge.js */,
-				78C9148BA496444797060483 /* soundcloud_cue */,
+				A445596FB8E8453896937038 /* Assets.xcassets */,
+				F52E23B050C7419ABAC7E859 /* extension_bridge.js */,
+				9F6A97732902429DB2E8BF54 /* soundcloud_cue */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		7816F6BCE2B14A55B6D449FA /* ExtensionBrowser */ = {
+		ED854CC9419248688FFCBFC2 /* ExtensionBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				2F9C66C82A124FF1BA3E433A /* App */,
-				017FACC5E7DE414F82749068 /* Core */,
-				FAF665F51C914712BEA6A40D /* Views */,
-				63A34BE664E84B7291918C1C /* Resources */,
+				43A4222788B647C4852451EA /* App */,
+				C0E2569AFFED4BC8A8A6B052 /* Core */,
+				191EC3B48C7F436386C0F5D4 /* Views */,
+				60685E124B974BA3B760EC33 /* Resources */,
 			);
 			path = ExtensionBrowser;
 			sourceTree = "<group>";
 		};
-		49B39E8F7EE745398E0FDBA0 /* Products */ = {
+		D483836D78DF4E63A2A95DDC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5656A8DEF6A543ADB5A7EE09 /* ExtensionBrowser.app */,
+				F0B58484C1864627859C20B9 /* ExtensionBrowser.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DD0F2829F93C43CB8B7AB1C4 = {
+		E66A78C0077842E897FC6EA8 = {
 			isa = PBXGroup;
 			children = (
-				7816F6BCE2B14A55B6D449FA /* ExtensionBrowser */,
-				49B39E8F7EE745398E0FDBA0 /* Products */,
+				ED854CC9419248688FFCBFC2 /* ExtensionBrowser */,
+				D483836D78DF4E63A2A95DDC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C79162EE498447FAA215F684 /* ExtensionBrowser */ = {
+		6D09F0F1207A4BE3AB3E2AFC /* ExtensionBrowser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 022FF54C0B744FBE9D288784 /* Build configuration list for PBXNativeTarget "ExtensionBrowser" */;
+			buildConfigurationList = 734858C028904BE4824ACB3F /* Build configuration list for PBXNativeTarget "ExtensionBrowser" */;
 			buildPhases = (
-				AF795EF078624A5BAD0908BD /* Sources */,
-				B8964557DEAC493D80B5A00A /* Frameworks */,
-				144C2026710A45CCA0153B9A /* Resources */,
+				387E08D3111B49578722AE79 /* Sources */,
+				92E86E67C7D84A3B92B9AB85 /* Frameworks */,
+				54C077362051480EB452946E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -152,22 +152,22 @@
 			);
 			name = ExtensionBrowser;
 			productName = ExtensionBrowser;
-			productReference = 5656A8DEF6A543ADB5A7EE09 /* ExtensionBrowser.app */;
+			productReference = F0B58484C1864627859C20B9 /* ExtensionBrowser.app */;
 			productType = "com.apple.product-type.application";
 		};
-		94ACD1A504AE4EA99ACF6938 /* Project object */ = {
+		3CCD396AED1740B7A1538E93 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					C79162EE498447FAA215F684 = {
+					6D09F0F1207A4BE3AB3E2AFC = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = 87FA18FFEE654E9CB1200CC4 /* Build configuration list for PBXProject "ExtensionBrowser" */;
+			buildConfigurationList = 0F4DF258131A47E4971CCD77 /* Build configuration list for PBXProject "ExtensionBrowser" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -175,15 +175,15 @@
 				en,
 				Base,
 			);
-			mainGroup = DD0F2829F93C43CB8B7AB1C4;
-			productRefGroup = 49B39E8F7EE745398E0FDBA0 /* Products */;
+			mainGroup = E66A78C0077842E897FC6EA8;
+			productRefGroup = D483836D78DF4E63A2A95DDC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C79162EE498447FAA215F684 /* ExtensionBrowser */,
+				6D09F0F1207A4BE3AB3E2AFC /* ExtensionBrowser */,
 			);
 		};
-		6501C5BE07104DFA9D254A05 /* Debug */ = {
+		2E18BCCF56E3485089512F01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -206,6 +206,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lz",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanhai.extensionbrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -221,7 +225,7 @@
 			};
 			name = Debug;
 		};
-		615503CF35EB4DC3B3124CDD /* Release */ = {
+		BADBFB79E0924D98AD06875E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,6 +248,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lz",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanhai.extensionbrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -256,7 +264,7 @@
 			};
 			name = Release;
 		};
-		536022B77C2B4514A114AB51 /* Debug */ = {
+		F02557CF05BA435DAC2A0FA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -279,6 +287,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lz",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanhai.extensionbrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -294,7 +306,7 @@
 			};
 			name = Debug;
 		};
-		7B932BC47D674A289860A279 /* Release */ = {
+		D6B14C7F16C84B4FA1A4F130 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -317,6 +329,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lz",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanhai.extensionbrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -329,24 +345,24 @@
 			};
 			name = Release;
 		};
-		87FA18FFEE654E9CB1200CC4 /* Build configuration list for PBXProject "ExtensionBrowser" */ = {
+		0F4DF258131A47E4971CCD77 /* Build configuration list for PBXProject "ExtensionBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6501C5BE07104DFA9D254A05 /* Debug */,
-				615503CF35EB4DC3B3124CDD /* Release */,
+				2E18BCCF56E3485089512F01 /* Debug */,
+				BADBFB79E0924D98AD06875E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		022FF54C0B744FBE9D288784 /* Build configuration list for PBXNativeTarget "ExtensionBrowser" */ = {
+		734858C028904BE4824ACB3F /* Build configuration list for PBXNativeTarget "ExtensionBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				536022B77C2B4514A114AB51 /* Debug */,
-				7B932BC47D674A289860A279 /* Release */,
+				F02557CF05BA435DAC2A0FA3 /* Debug */,
+				D6B14C7F16C84B4FA1A4F130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 	};
-	rootObject = 94ACD1A504AE4EA99ACF6938 /* Project object */;
+	rootObject = 3CCD396AED1740B7A1538E93 /* Project object */;
 }

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C79162EE498447FAA215F684"
+               BlueprintIdentifier = "6D09F0F1207A4BE3AB3E2AFC"
                BuildableName = "ExtensionBrowser.app"
                BlueprintName = "ExtensionBrowser"
                ReferencedContainer = "container:ExtensionBrowser.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C79162EE498447FAA215F684"
+            BlueprintIdentifier = "6D09F0F1207A4BE3AB3E2AFC"
             BuildableName = "ExtensionBrowser.app"
             BlueprintName = "ExtensionBrowser"
             ReferencedContainer = "container:ExtensionBrowser.xcodeproj">
@@ -61,7 +61,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C79162EE498447FAA215F684"
+            BlueprintIdentifier = "6D09F0F1207A4BE3AB3E2AFC"
             BuildableName = "ExtensionBrowser.app"
             BlueprintName = "ExtensionBrowser"
             ReferencedContainer = "container:ExtensionBrowser.xcodeproj">

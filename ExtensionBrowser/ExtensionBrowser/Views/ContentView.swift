@@ -28,6 +28,10 @@ public struct ContentView: View {
     @State private var showingExtensionManager = false
     @State private var selectedExtensionForPopup: WebExtension? = nil
 
+    private var activePopupExtension: WebExtension? {
+        extensionManager.getActivePopupExtensions(for: URL(string: currentURLString)).first
+    }
+
     public var body: some View {
         VStack(spacing: 0) {
             // MARK: - Top Header & Address Bar
@@ -91,10 +95,9 @@ public struct ContentView: View {
                             .font(.system(size: 16, weight: .medium))
                             .foregroundColor(isDesktopMode ? .orange : .secondary)
                     }
-                    .help(isDesktopMode ? "Chế độ Desktop (Bật)" : "Chế độ Mobile")
 
-                    // Extension Quick Action (Nút Popup của Extension đang hoạt động, như SoundCloud Crossfader)
-                    if let primaryExt = extensionManager.getActivePopupExtensions(for: URL(string: currentURLString)).first {
+                    // Extension Quick Action (Nút Popup của Extension đang hoạt động)
+                    if let primaryExt = activePopupExtension {
                         Button(action: { selectedExtensionForPopup = primaryExt }) {
                             if let icon = primaryExt.iconImage {
                                 Image(uiImage: icon)
@@ -121,7 +124,6 @@ public struct ContentView: View {
                                 .font(.system(size: 17))
                                 .foregroundColor(.orange)
 
-                            // Badge số lượng extension đang bật
                             let activeCount = extensionManager.extensions.filter { $0.isEnabled }.count
                             if activeCount > 0 {
                                 Text("\(activeCount)")
@@ -194,7 +196,6 @@ public struct ContentView: View {
             if trimmed.contains(".") && !trimmed.contains(" ") {
                 trimmed = "https://" + trimmed
             } else {
-                // Tìm kiếm trên Google
                 let query = trimmed.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? trimmed
                 trimmed = "https://www.google.com/search?q=\(query)"
             }

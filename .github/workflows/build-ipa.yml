@@ -24,6 +24,7 @@ jobs:
       - name: Build App (Unsigned Ad-hoc)
         run: |
           mkdir -p build/Payload
+          set -o pipefail
           xcodebuild clean build \
             -project ExtensionBrowser/ExtensionBrowser.xcodeproj \
             -scheme ExtensionBrowser \
@@ -34,7 +35,8 @@ jobs:
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGNING_ALLOWED=NO \
-            AD_HOC_CODE_SIGNING_ALLOWED=YES
+            AD_HOC_CODE_SIGNING_ALLOWED=YES \
+            COMPILER_INDEX_STORE_ENABLE=NO
 
           APP_PATH=$(find build/DerivedData/Build/Products/Release-iphoneos -name "*.app" -type d | head -n 1)
           if [ -z "$APP_PATH" ]; then
