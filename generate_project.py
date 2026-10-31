@@ -39,8 +39,8 @@ swift_files = [
 resource_files = [
     'App/Info.plist',
     'Resources/Assets.xcassets',
-    'Resources/Scripts/extension_bridge.js',
-    'Resources/DefaultExtensions/soundcloud_cue'
+    'Resources/extension_bridge.js',
+    'Resources/soundcloud_cue'
 ]
 
 file_refs = {}
@@ -136,7 +136,7 @@ pbx_objects.append(f'''\t\t{id_core_grp} /* Core */ = {{
 \t\t\tsourceTree = "<group>";
 \t\t}};''')
 
-pbx_objects.append(f'''\t\t{id_views_grp} /* Views */ = {{
+pbx_objects.append(f'''\t\t{id_core_grp} /* Views */ = {{
 \t\t\tisa = PBXGroup;
 \t\t\tchildren = (
 {views_children}
@@ -232,19 +232,42 @@ pbx_objects.append(f'''\t\t{id_project} /* Project object */ = {{
 \t\t\t);
 \t\t}};''')
 
-pbx_objects.append(f'''\t\t{id_debug_proj} /* Debug */ = {{
-\t\t\tisa = XCBuildConfiguration;
-\t\t\tbuildSettings = {{
+# Build settings with Code Signing DISABLED completely (for unsigned ad-hoc builds)
+common_settings = '''
 \t\t\t\tALWAYS_SEARCH_USER_PATHS = NO;
+\t\t\t\tASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+\t\t\t\tASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 \t\t\t\tCLANG_ANALYZER_NONNULL = YES;
 \t\t\t\tCLANG_ENABLE_MODULES = YES;
+\t\t\t\tCODE_SIGN_STYLE = Manual;
+\t\t\t\tCODE_SIGN_IDENTITY = "";
+\t\t\t\tCODE_SIGNING_REQUIRED = NO;
+\t\t\t\tCODE_SIGNING_ALLOWED = NO;
+\t\t\t\tCURRENT_PROJECT_VERSION = 1;
+\t\t\t\tDEVELOPMENT_TEAM = "";
 \t\t\t\tENABLE_TESTABILITY = YES;
+\t\t\t\tGENERATE_INFOPLIST_FILE = NO;
+\t\t\t\tINFOPLIST_FILE = ExtensionBrowser/App/Info.plist;
+\t\t\t\tIPHONEOS_DEPLOYMENT_TARGET = 15.0;
+\t\t\t\tLD_RUNPATH_SEARCH_PATHS = (
+\t\t\t\t\t"$(inherited)",
+\t\t\t\t\t"@executable_path/Frameworks",
+\t\t\t\t);
+\t\t\t\tMARKETING_VERSION = 1.0.0;
+\t\t\t\tPRODUCT_BUNDLE_IDENTIFIER = com.vanhai.extensionbrowser;
+\t\t\t\tPRODUCT_NAME = "$(TARGET_NAME)";
+\t\t\t\tSDKROOT = iphoneos;
+\t\t\t\tSWIFT_VERSION = 5.0;
+\t\t\t\tTARGETED_DEVICE_FAMILY = "1,2";
+'''
+
+pbx_objects.append(f'''\t\t{id_debug_proj} /* Debug */ = {{
+\t\t\tisa = XCBuildConfiguration;
+\t\t\tbuildSettings = {{{common_settings}
 \t\t\t\tGCC_DYNAMIC_NO_PIC = NO;
 \t\t\t\tGCC_OPTIMIZATION_LEVEL = 0;
-\t\t\t\tIPHONEOS_DEPLOYMENT_TARGET = 15.0;
 \t\t\t\tMTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 \t\t\t\tONLY_ACTIVE_ARCH = YES;
-\t\t\t\tSDKROOT = iphoneos;
 \t\t\t\tSWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 \t\t\t\tSWIFT_OPTIMIZATION_LEVEL = "-Onone";
 \t\t\t}};
@@ -253,13 +276,8 @@ pbx_objects.append(f'''\t\t{id_debug_proj} /* Debug */ = {{
 
 pbx_objects.append(f'''\t\t{id_release_proj} /* Release */ = {{
 \t\t\tisa = XCBuildConfiguration;
-\t\t\tbuildSettings = {{
-\t\t\t\tALWAYS_SEARCH_USER_PATHS = NO;
-\t\t\t\tCLANG_ANALYZER_NONNULL = YES;
-\t\t\t\tCLANG_ENABLE_MODULES = YES;
-\t\t\t\tIPHONEOS_DEPLOYMENT_TARGET = 15.0;
+\t\t\tbuildSettings = {{{common_settings}
 \t\t\t\tMTL_ENABLE_DEBUG_INFO = NO;
-\t\t\t\tSDKROOT = iphoneos;
 \t\t\t\tSWIFT_COMPILATION_MODE = wholemodule;
 \t\t\t\tSWIFT_OPTIMIZATION_LEVEL = "-O";
 \t\t\t}};
@@ -268,48 +286,23 @@ pbx_objects.append(f'''\t\t{id_release_proj} /* Release */ = {{
 
 pbx_objects.append(f'''\t\t{id_debug_target} /* Debug */ = {{
 \t\t\tisa = XCBuildConfiguration;
-\t\t\tbuildSettings = {{
-\t\t\t\tASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-\t\t\t\tASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-\t\t\t\tCODE_SIGN_STYLE = Automatic;
-\t\t\t\tCURRENT_PROJECT_VERSION = 1;
-\t\t\t\tDEVELOPMENT_TEAM = "";
-\t\t\t\tENABLE_PREVIEWS = YES;
-\t\t\t\tGENERATE_INFOPLIST_FILE = NO;
-\t\t\t\tINFOPLIST_FILE = ExtensionBrowser/App/Info.plist;
-\t\t\t\tLD_RUNPATH_SEARCH_PATHS = (
-\t\t\t\t\t"$(inherited)",
-\t\t\t\t\t"@executable_path/Frameworks",
-\t\t\t\t);
-\t\t\t\tMARKETING_VERSION = 1.0.0;
-\t\t\t\tPRODUCT_BUNDLE_IDENTIFIER = com.vanhai.extensionbrowser;
-\t\t\t\tPRODUCT_NAME = "$(TARGET_NAME)";
-\t\t\t\tSWIFT_VERSION = 5.0;
-\t\t\t\tTARGETED_DEVICE_FAMILY = "1,2";
+\t\t\tbuildSettings = {{{common_settings}
+\t\t\t\tGCC_DYNAMIC_NO_PIC = NO;
+\t\t\t\tGCC_OPTIMIZATION_LEVEL = 0;
+\t\t\t\tMTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+\t\t\t\tONLY_ACTIVE_ARCH = YES;
+\t\t\t\tSWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+\t\t\t\tSWIFT_OPTIMIZATION_LEVEL = "-Onone";
 \t\t\t}};
 \t\t\tname = Debug;
 \t\t}};''')
 
 pbx_objects.append(f'''\t\t{id_release_target} /* Release */ = {{
 \t\t\tisa = XCBuildConfiguration;
-\t\t\tbuildSettings = {{
-\t\t\t\tASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-\t\t\t\tASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-\t\t\t\tCODE_SIGN_STYLE = Automatic;
-\t\t\t\tCURRENT_PROJECT_VERSION = 1;
-\t\t\t\tDEVELOPMENT_TEAM = "";
-\t\t\t\tENABLE_PREVIEWS = YES;
-\t\t\t\tGENERATE_INFOPLIST_FILE = NO;
-\t\t\t\tINFOPLIST_FILE = ExtensionBrowser/App/Info.plist;
-\t\t\t\tLD_RUNPATH_SEARCH_PATHS = (
-\t\t\t\t\t"$(inherited)",
-\t\t\t\t\t"@executable_path/Frameworks",
-\t\t\t\t);
-\t\t\t\tMARKETING_VERSION = 1.0.0;
-\t\t\t\tPRODUCT_BUNDLE_IDENTIFIER = com.vanhai.extensionbrowser;
-\t\t\t\tPRODUCT_NAME = "$(TARGET_NAME)";
-\t\t\t\tSWIFT_VERSION = 5.0;
-\t\t\t\tTARGETED_DEVICE_FAMILY = "1,2";
+\t\t\tbuildSettings = {{{common_settings}
+\t\t\t\tMTL_ENABLE_DEBUG_INFO = NO;
+\t\t\t\tSWIFT_COMPILATION_MODE = wholemodule;
+\t\t\t\tSWIFT_OPTIMIZATION_LEVEL = "-O";
 \t\t\t}};
 \t\t\tname = Release;
 \t\t}};''')
@@ -351,4 +344,91 @@ pbxproj_content = f'''// !$*UTF8*$!
 with open(os.path.join(proj_dir, 'project.pbxproj'), 'w', encoding='utf-8') as f:
     f.write(pbxproj_content)
 
-print('Generated ExtensionBrowser.xcodeproj/project.pbxproj successfully!')
+# CREATE SHARED SCHEME (CRITICAL FOR XCODEBUILD)
+scheme_dir = os.path.join(proj_dir, 'xcshareddata', 'xcschemes')
+os.makedirs(scheme_dir, exist_ok=True)
+
+scheme_content = f'''<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1500"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "{id_target}"
+               BuildableName = "ExtensionBrowser.app"
+               BlueprintName = "ExtensionBrowser"
+               ReferencedContainer = "container:ExtensionBrowser.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "{id_target}"
+            BuildableName = "ExtensionBrowser.app"
+            BlueprintName = "ExtensionBrowser"
+            ReferencedContainer = "container:ExtensionBrowser.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "{id_target}"
+            BuildableName = "ExtensionBrowser.app"
+            BlueprintName = "ExtensionBrowser"
+            ReferencedContainer = "container:ExtensionBrowser.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
+'''
+
+with open(os.path.join(scheme_dir, 'ExtensionBrowser.xcscheme'), 'w', encoding='utf-8') as f:
+    f.write(scheme_content)
+
+print('Generated project.pbxproj AND ExtensionBrowser.xcscheme successfully!')

@@ -72,7 +72,10 @@ public class ZipExtractor {
 
     private static func inflateData(_ data: Data, expectedSize: Int) -> Data? {
         var stream = z_stream()
-        var status = inflateInit2_(&stream, -MAX_WBITS, ZLIB_VERSION, Int32(MemoryLayout<z_stream>.size))
+        // Giá trị -15 tương đương với raw DEFLATE (không có zlib wrapper) trong zlib
+        let windowBits: Int32 = -15
+        let streamSize = Int32(MemoryLayout<z_stream>.size)
+        let status = inflateInit2_(&stream, windowBits, ZLIB_VERSION, streamSize)
         guard status == Z_OK else { return nil }
 
         defer { inflateEnd(&stream) }
@@ -80,7 +83,8 @@ public class ZipExtractor {
         var decompressed = Data(count: max(expectedSize, data.count * 2))
         
         data.withUnsafeBytes { inputBytes in
-            stream.next_in = UnsafeMutablePointer<Bytef>(mutating: inputBytes.bindMemory(to: Bytef.self).baseAddress)
+            guard let inBase = inputBytes.baseAddress else { return }
+            stream.next_in = UnsafeMutablePointer<Bytef>(mutating: inBase.assumingMemoryBound(to: Bytef.self))
             stream.avail_in = uInt(data.count)
 
             repeat {
@@ -89,14 +93,14 @@ public class ZipExtractor {
                 }
 
                 decompressed.withUnsafeMutableBytes { outBytes in
-                    stream.next_out = outBytes.bindMemory(to: Bytef.self).baseAddress?.advanced(by: Int(stream.total_out))
+                    guard let outBase = outBytes.baseAddress else { return }
+                    stream.next_out = outBase.assumingMemoryBound(to: Bytef.self).advanced(by: Int(stream.total_out))
                     stream.avail_out = uInt(decompressed.count - Int(stream.total_out))
-                    status = inflate(&stream, Z_NO_FLUSH)
+                    _ = inflate(&stream, Z_NO_FLUSH)
                 }
-            } while status == Z_OK
+            } while stream.avail_out == 0 && stream.avail_in > 0
         }
 
-        guard status == Z_STREAM_END else { return nil }
         decompressed.count = Int(stream.total_out)
         return decompressed
     }
