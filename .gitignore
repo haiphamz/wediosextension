@@ -1,0 +1,11 @@
+# macOS / Xcode
+.DS_Store
+*.xcworkspace
+xcuserdata/
+DerivedData/
+build/
+
+# Heavy extracted folders
+Payload/
+unzipped_code/
+*.tmp

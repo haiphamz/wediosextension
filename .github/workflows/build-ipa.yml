@@ -1,0 +1,58 @@
+name: Build iOS IPA
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build & Package IPA
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Select Xcode Version
+        run: |
+          if [ -d "/Applications/Xcode_15.4.app" ]; then
+            sudo xcode-select -switch /Applications/Xcode_15.4.app/Contents/Developer
+          elif [ -d "/Applications/Xcode_15.3.app" ]; then
+            sudo xcode-select -switch /Applications/Xcode_15.3.app/Contents/Developer
+          elif [ -d "/Applications/Xcode_16.app" ]; then
+            sudo xcode-select -switch /Applications/Xcode_16.app/Contents/Developer
+          fi
+          xcodebuild -version
+
+      - name: Build App (Ad-hoc / Unsigned)
+        run: |
+          mkdir -p build/Payload
+          xcodebuild build \
+            -project ExtensionBrowser/ExtensionBrowser.xcodeproj \
+            -scheme ExtensionBrowser \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            AD_HOC_CODE_SIGNING_ALLOWED=YES
+
+          APP_PATH=$(find build/DerivedData/Build/Products/Release-iphoneos -name "*.app" -type d | head -n 1)
+          echo "Found compiled app at: $APP_PATH"
+          cp -r "$APP_PATH" build/Payload/
+
+          cd build
+          zip -r -y ExtensionBrowser.ipa Payload/
+          cd ..
+          echo "Build finished! IPA size: $(ls -lh build/ExtensionBrowser.ipa | awk '{print $5}')"
+
+      - name: Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ExtensionBrowser-IPA
+          path: build/ExtensionBrowser.ipa
+          retention-days: 30

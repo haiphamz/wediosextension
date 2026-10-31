@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "SoundCloud Auto Crossfader & Cue Manager",
+  "version": "4.1",
+  "description": "Tự động tua mốc phát, chuyển bài không delay và quản lý cue điểm SoundCloud",
+  "icons": {
+    "60": "AppIcon60x60@2x.png",
+    "128": "AppIcon76x76@2x~ipad.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "SoundCloud Cue Manager",
+    "default_icon": "AppIcon60x60@2x.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.soundcloud.com/*",
+        "https://soundcloud.com/*"
+      ],
+      "js": [
+        "hls.light.min.js",
+        "extension_bridge.js",
+        "inject.js",
+        "content.js"
+      ],
+      "css": [
+        "popup.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "tabs",
+    "*://*.soundcloud.com/*"
+  ]
+}

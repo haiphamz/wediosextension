@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+		8280E25016C94DD6A75D4758 /* ExtensionBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionBrowserApp.swift"; sourceTree = "<group>"; };
+		B3CA32FBBC204073AE25E012 /* WebExtensionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebExtensionModel.swift"; sourceTree = "<group>"; };
+		C2520F83D949438F9A748693 /* MatchPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchPattern.swift"; sourceTree = "<group>"; };
+		CE38FFA079664E989FC7C14C /* ZipExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZipExtractor.swift"; sourceTree = "<group>"; };
+		ED4EF2DFEE1440C88A8A40FE /* WebExtensionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebExtensionManager.swift"; sourceTree = "<group>"; };
+		2A037E80BCDE4EAC88E0F3FA /* WebExtensionBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebExtensionBridge.swift"; sourceTree = "<group>"; };
+		DFBE5243876B4EEE96383939 /* BrowserWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrowserWebView.swift"; sourceTree = "<group>"; };
+		4DF937F88866450E9053F7C4 /* ExtensionPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionPopupView.swift"; sourceTree = "<group>"; };
+		2787E46654E34CA7A3385B08 /* ExtensionManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionManagerView.swift"; sourceTree = "<group>"; };
+		B3CD7BC48C1D400D85770653 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
+		E0B5F76EA236416A89EB6277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
+		939CB257362B43968718817E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
+		BF7B0DE99FFD4AA9A956F660 /* extension_bridge.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "extension_bridge.js"; sourceTree = "<group>"; };
+		7EF070F64968478CACFCD87F /* soundcloud_cue */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "soundcloud_cue"; sourceTree = "<group>"; };
+		0E9704DB77C443E1A6751366 /* ExtensionBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A3C8E6F2E6418BBB90670D /* ExtensionBrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280E25016C94DD6A75D4758 /* ExtensionBrowserApp.swift */; };
+		03148E08F659464580AAFF0E /* WebExtensionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA32FBBC204073AE25E012 /* WebExtensionModel.swift */; };
+		351D49D6C2354E49BC8D1208 /* MatchPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2520F83D949438F9A748693 /* MatchPattern.swift */; };
+		BA494519091448E6AE0954F3 /* ZipExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38FFA079664E989FC7C14C /* ZipExtractor.swift */; };
+		375B753531C54A16ADAF52B7 /* WebExtensionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4EF2DFEE1440C88A8A40FE /* WebExtensionManager.swift */; };
+		6AE2C3B6295F42A49D6FB247 /* WebExtensionBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A037E80BCDE4EAC88E0F3FA /* WebExtensionBridge.swift */; };
+		5D96E20CD360425B946F5059 /* BrowserWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBE5243876B4EEE96383939 /* BrowserWebView.swift */; };
+		2F35AD2F11D04B9FA3BED63F /* ExtensionPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF937F88866450E9053F7C4 /* ExtensionPopupView.swift */; };
+		9856FDE0819C48BA974FF44C /* ExtensionManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787E46654E34CA7A3385B08 /* ExtensionManagerView.swift */; };
+		1D74307BE33C443B9A03CFFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD7BC48C1D400D85770653 /* ContentView.swift */; };
+		CA2B481E2F38442B994D3B7B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0B5F76EA236416A89EB6277 /* Info.plist */; };
+		A12B340EF516486998E84A81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 939CB257362B43968718817E /* Assets.xcassets */; };
+		7B59893F7A6143FFA3AF6ABE /* extension_bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = BF7B0DE99FFD4AA9A956F660 /* extension_bridge.js */; };
+		3837C02C53474FB19F6C0E0E /* soundcloud_cue in Resources */ = {isa = PBXBuildFile; fileRef = 7EF070F64968478CACFCD87F /* soundcloud_cue */; };
+		BBFBDF451DF14AF1A78D63F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41A3C8E6F2E6418BBB90670D /* ExtensionBrowserApp.swift in Sources */,
+				03148E08F659464580AAFF0E /* WebExtensionModel.swift in Sources */,
+				351D49D6C2354E49BC8D1208 /* MatchPattern.swift in Sources */,
+				BA494519091448E6AE0954F3 /* ZipExtractor.swift in Sources */,
+				375B753531C54A16ADAF52B7 /* WebExtensionManager.swift in Sources */,
+				6AE2C3B6295F42A49D6FB247 /* WebExtensionBridge.swift in Sources */,
+				5D96E20CD360425B946F5059 /* BrowserWebView.swift in Sources */,
+				2F35AD2F11D04B9FA3BED63F /* ExtensionPopupView.swift in Sources */,
+				9856FDE0819C48BA974FF44C /* ExtensionManagerView.swift in Sources */,
+				1D74307BE33C443B9A03CFFE /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07CF68BD10334527853609E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA2B481E2F38442B994D3B7B /* Info.plist in Resources */,
+				A12B340EF516486998E84A81 /* Assets.xcassets in Resources */,
+				7B59893F7A6143FFA3AF6ABE /* extension_bridge.js in Resources */,
+				3837C02C53474FB19F6C0E0E /* soundcloud_cue in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3433D149F35649498A08D6F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2A9B3C7012B4484845A2729 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8280E25016C94DD6A75D4758 /* ExtensionBrowserApp.swift */,
+				E0B5F76EA236416A89EB6277 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D4F52A84E43E43949F6E2375 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B3CA32FBBC204073AE25E012 /* WebExtensionModel.swift */,
+				C2520F83D949438F9A748693 /* MatchPattern.swift */,
+				CE38FFA079664E989FC7C14C /* ZipExtractor.swift */,
+				ED4EF2DFEE1440C88A8A40FE /* WebExtensionManager.swift */,
+				2A037E80BCDE4EAC88E0F3FA /* WebExtensionBridge.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A03E4B0534884FD0900FBDB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFBE5243876B4EEE96383939 /* BrowserWebView.swift */,
+				4DF937F88866450E9053F7C4 /* ExtensionPopupView.swift */,
+				2787E46654E34CA7A3385B08 /* ExtensionManagerView.swift */,
+				B3CD7BC48C1D400D85770653 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9980BF0CAA85473D87A97CF3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				939CB257362B43968718817E /* Assets.xcassets */,
+				BF7B0DE99FFD4AA9A956F660 /* extension_bridge.js */,
+				7EF070F64968478CACFCD87F /* soundcloud_cue */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		29AEEAC020E9429D92A291D0 /* ExtensionBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				E2A9B3C7012B4484845A2729 /* App */,
+				D4F52A84E43E43949F6E2375 /* Core */,
+				A03E4B0534884FD0900FBDB4 /* Views */,
+				9980BF0CAA85473D87A97CF3 /* Resources */,
+			);
+			path = ExtensionBrowser;
+			sourceTree = "<group>";
+		};
+		C8116C3D564F477CA01BE5D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E9704DB77C443E1A6751366 /* ExtensionBrowser.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D54217A4DF64C83B1E5890A = {
+			isa = PBXGroup;
+			children = (
+				29AEEAC020E9429D92A291D0 /* ExtensionBrowser */,
+				C8116C3D564F477CA01BE5D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		08740BEF64CC40F0AF9DEB87 /* ExtensionBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB4B580F0434DCBBEBC16A0 /* Build configuration list for PBXNativeTarget "ExtensionBrowser" */;
+			buildPhases = (
+				BBFBDF451DF14AF1A78D63F4 /* Sources */,
+				3433D149F35649498A08D6F0 /* Frameworks */,
+				07CF68BD10334527853609E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExtensionBrowser;
+			productName = ExtensionBrowser;
+			productReference = 0E9704DB77C443E1A6751366 /* ExtensionBrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		488256AC393A467FACC55A48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					08740BEF64CC40F0AF9DEB87 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 7A644BBE6A8B4C03A22EE7B6 /* Build configuration list for PBXProject "ExtensionBrowser" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D54217A4DF64C83B1E5890A;
+			productRefGroup = C8116C3D564F477CA01BE5D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				08740BEF64CC40F0AF9DEB87 /* ExtensionBrowser */,
+			);
+		};
+		92208C7CC41441CBB3FFB315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3E815A80F1BD417692E6F12C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CE8990F7EE4947C3BDD6FC5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ExtensionBrowser/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vanhai.extensionbrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77E95E2597354C75916EA58D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ExtensionBrowser/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vanhai.extensionbrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7A644BBE6A8B4C03A22EE7B6 /* Build configuration list for PBXProject "ExtensionBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92208C7CC41441CBB3FFB315 /* Debug */,
+				3E815A80F1BD417692E6F12C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EB4B580F0434DCBBEBC16A0 /* Build configuration list for PBXNativeTarget "ExtensionBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE8990F7EE4947C3BDD6FC5D /* Debug */,
+				77E95E2597354C75916EA58D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+	};
+	rootObject = 488256AC393A467FACC55A48 /* Project object */;
+}
